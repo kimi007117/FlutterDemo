@@ -9,6 +9,13 @@
 .history
 .svn/
 
+*.iml
+*/*.iml
+/.idea
+*/.idea
+out/
+gen/
+
 # IntelliJ related
 *.iml
 *.ipr
@@ -28,6 +35,11 @@
 .pub-cache/
 .pub/
 /build/
+/pubspec.lock
+
+build/
+*/build/
+.gradle
 
 # Android related
 **/android/**/gradle-wrapper.jar
@@ -37,6 +49,9 @@
 **/android/gradlew.bat
 **/android/local.properties
 **/android/**/GeneratedPluginRegistrant.java
+
+# Local configuration file (sdk path, etc)
+/local.properties
 
 # iOS/XCode related
 **/ios/**/*.mode1v3

@@ -16,6 +16,7 @@ class PopupPage2 extends StatefulWidget {
 
   final String title;
 
+
   @override
   _PopupPage2State createState() => _PopupPage2State();
 }

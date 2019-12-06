@@ -13,6 +13,12 @@ import 'package:fluttertoast/fluttertoast.dart';
 /// 控制滚动的初始offset，可以通过设置ScrollController.initialScrollOffset属性。
 
 /// 默认情况下，ListView将自动填充列表的可滚动的末端，以避免MediaQuery的填充所指示的部分阻塞。若要避免此行为，请重写可以空的padding属性。
+///
+/// BouncingScrollPhysics ：允许滚动超出边界，但之后内容会反弹回来。
+/// ClampingScrollPhysics ： 防止滚动超出边界，夹住 。
+/// AlwaysScrollableScrollPhysics ：始终响应用户的滚动。
+/// NeverScrollableScrollPhysics ：不响应用户的滚动。
+
 
 class ListViewPage extends StatefulWidget {
   @override

@@ -3,15 +3,22 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_app/page/custom_scroll_view.dart';
+import 'package:flutter_app/page/button_page.dart';
+import 'package:flutter_app/page/checkbox_page.dart';
+import 'package:flutter_app/page/custom_scroll_view_page.dart';
 import 'package:flutter_app/page/expanded_page.dart';
 import 'package:flutter_app/page/grid_view_page.dart';
 import 'package:flutter_app/page/ink_well_page.dart';
 import 'package:flutter_app/page/list_view_page.dart';
 import 'package:flutter_app/page/margin_page.dart';
+import 'package:flutter_app/page/nested_scroll_view_page.dart';
 import 'package:flutter_app/page/padding_page.dart';
 import 'package:flutter_app/page/popup_page.dart';
 import 'package:flutter_app/page/popup_page2.dart';
+import 'package:flutter_app/page/radio_page.dart';
+import 'package:flutter_app/page/switch_page.dart';
+import 'package:flutter_app/page/text_page.dart';
+import 'package:flutter_app/page/visibility_page.dart';
 
 //void main() => runApp(MyApp());
 
@@ -73,6 +80,13 @@ class _MainPageState extends State<MainPage> {
             getItem(context, "ListViewPage", ListViewPage()),
             getItem(context, "GridViewPage", GridViewPage()),
             getItem(context, "CustomScrollViewPage", CustomScrollViewPage()),
+            getItem(context, "ButtonPage", ButtonPage()),
+            getItem(context, "NestedScrollViewPage", NestedScrollViewPage()),
+            getItem(context, "VisibilityPage", VisibilityPage()),
+            getItem(context, "TextPage", TextPage()),
+            getItem(context, "CheckboxPage", CheckboxPage()),
+            getItem(context, "RadioPage", RadioPage()),
+            getItem(context, "SwitchPage", SwitchPage()),
           ],
         ));
   }

@@ -27,6 +27,12 @@ class _DemoPageState extends State<DemoPage> {
   }
 
   @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -34,9 +40,15 @@ class _DemoPageState extends State<DemoPage> {
         // the App.build method, and use it to set our appbar title.
         title: Text("DemoPage"),
       ),
-      body: Container(
-        child: Text("测试"),
-      ),
+      body: buildBody(),
+    );
+  }
+
+  Widget buildBody(){
+    return ListView(
+      children: <Widget>[
+
+      ],
     );
   }
 }

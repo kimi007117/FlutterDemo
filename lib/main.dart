@@ -10,12 +10,15 @@ import 'package:flutter_app/page/expanded_page.dart';
 import 'package:flutter_app/page/grid_view_page.dart';
 import 'package:flutter_app/page/ink_well_page.dart';
 import 'package:flutter_app/page/list_view_page.dart';
+import 'package:flutter_app/page/loading_page.dart';
 import 'package:flutter_app/page/margin_page.dart';
+import 'package:flutter_app/page/menu_page.dart';
 import 'package:flutter_app/page/nested_scroll_view_page.dart';
 import 'package:flutter_app/page/padding_page.dart';
 import 'package:flutter_app/page/popup_page.dart';
 import 'package:flutter_app/page/popup_page2.dart';
 import 'package:flutter_app/page/radio_page.dart';
+import 'package:flutter_app/page/should_rebuild_page.dart';
 import 'package:flutter_app/page/switch_page.dart';
 import 'package:flutter_app/page/text_page.dart';
 import 'package:flutter_app/page/visibility_page.dart';
@@ -87,6 +90,9 @@ class _MainPageState extends State<MainPage> {
             getItem(context, "CheckboxPage", CheckboxPage()),
             getItem(context, "RadioPage", RadioPage()),
             getItem(context, "SwitchPage", SwitchPage()),
+            getItem(context, "MenuPage", MenuPage()),
+            getItem(context, "LoadingPage", LoadingPage()),
+            getItem(context, "ShouldRebuildPage", ShouldRebuildPage()),
           ],
         ));
   }

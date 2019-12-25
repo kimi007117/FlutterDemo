@@ -295,7 +295,7 @@ class _ButtonPageState extends State<ButtonPage> {
         DropdownButton(
           // Material Style 下拉菜单按钮
           //要显示的条目
-          items: _getItems(),
+          items: _getCityList(),
           //默认显示的值
           hint: Text("请选择城市"),
           //下拉菜单选中的值（注意：在初始化时，要么为null，这时显示默认hint的值；
@@ -303,7 +303,7 @@ class _ButtonPageState extends State<ButtonPage> {
           value: selectValue,
           onChanged: (itemValue) {
             //itemValue为选中的值
-            print("itemValue=$itemValue");
+            Fluttertoast.showToast(msg: itemValue);
             _onChanged(itemValue);
           },
         ),

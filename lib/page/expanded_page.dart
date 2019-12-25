@@ -101,7 +101,76 @@ class _ExpandedPageState extends State<ExpandedPage> {
                 ),
               ],
             ),
+            Row(children: <Widget>[
+              Expanded(
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: RaisedButton(
+                        onPressed: () {
+                          print('点击红色按钮事件');
+                        },
+                        color: const Color(0xffcc0000),
+                        child: new Text('红色按钮'),
+                      ),
+                    ),
+                    new Flexible(
+                      flex: 2,
+                      child: new RaisedButton(
+                        onPressed: () {
+                          print('点击黄色按钮事件');
+                        },
+                        color: const Color(0xfff1c232),
+                        child: new Text('黄色按钮'),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              new RaisedButton(
+                onPressed: () {
+                  print('点击粉色按钮事件');
+                },
+                color: const Color(0xffea9999),
+                child: new Text('粉色按钮'),
+              ),
+            ]),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                _buildButtonColumn(context, Icons.call, "Call"),
+                _buildButtonColumn(context, Icons.near_me, "Route"),
+                _buildButtonColumn(context, Icons.share, "Share"),
+              ],
+            ),
           ],
         ));
+  }
+
+  Column _buildButtonColumn(BuildContext context, IconData icon, String label) {
+    Color color = Theme.of(context).primaryColor;
+
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      //列布局
+      children: <Widget>[
+        Icon(
+          icon,
+          color: color,
+        ),
+        Container(
+          margin: EdgeInsets.only(top: 8.0),
+          child: Text(
+            label,
+            style: TextStyle(
+              fontSize: 12.0,
+              fontWeight: FontWeight.w400,
+              color: color,
+            ),
+          ),
+        )
+      ],
+    );
   }
 }

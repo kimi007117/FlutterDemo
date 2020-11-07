@@ -17,6 +17,8 @@ import 'package:flutter_app/page/nested_scroll_view_page.dart';
 import 'package:flutter_app/page/padding_page.dart';
 import 'package:flutter_app/page/popup_page.dart';
 import 'package:flutter_app/page/popup_page2.dart';
+import 'package:flutter_app/page/popup_page3.dart';
+import 'package:flutter_app/page/post_item_page.dart';
 import 'package:flutter_app/page/radio_page.dart';
 import 'package:flutter_app/page/should_rebuild_page.dart';
 import 'package:flutter_app/page/switch_page.dart';
@@ -93,6 +95,8 @@ class _MainPageState extends State<MainPage> {
             getItem(context, "MenuPage", MenuPage()),
             getItem(context, "LoadingPage", LoadingPage()),
             getItem(context, "ShouldRebuildPage", ShouldRebuildPage()),
+            getItem(context, "PopupPage3", PopupPage3()),
+            getItem(context, "PostItemPage", PostItemPage()),
           ],
         ));
   }

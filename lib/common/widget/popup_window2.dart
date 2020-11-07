@@ -154,6 +154,21 @@ class PopRoute extends PopupRoute {
   }
 
   @override
+  Widget buildTransitions(BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation, Widget child) {
+    // 渐变效果
+    return FadeTransition(
+      // 从0开始到1
+      opacity: Tween(begin: 0.0, end: 1.0).animate(CurvedAnimation(
+        // 传入设置的动画
+        parent: animation,
+        // 设置效果，快进漫出   这里有很多内置的效果
+        curve: Curves.fastOutSlowIn,
+      )),
+      child: child,
+    );
+  }
+
+  @override
   Duration get transitionDuration => _duration;
 }
 

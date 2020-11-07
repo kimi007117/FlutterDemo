@@ -192,8 +192,8 @@ class _TextPageState extends State<TextPage> {
                 style: TextStyle(color: Colors.green),
               ),
               TextSpan(
-                text: "这段文字是可点击的",
-                style: TextStyle(color: Colors.black),
+                  text: "这段文字是可点击的",
+                  style: TextStyle(color: Colors.black),
                   recognizer: new TapGestureRecognizer()
                     ..onTap = () {
                       var alert = new AlertDialog(
@@ -201,11 +201,72 @@ class _TextPageState extends State<TextPage> {
                         content: new Text("four is tapped"),
                       );
                       showDialog(context: context, child: alert);
-                    }
-              ),
+                    }),
             ],
           ),
           style: TextStyle(fontSize: 16.0), // 设置整体大小
+        ),
+        Container(
+          margin: EdgeInsets.fromLTRB(0, 15, 0, 0),
+          decoration: BoxDecoration(
+            image: DecorationImage(
+                fit: BoxFit.contain,
+              //  centerSlice: Rect.fromLTRB(19.0, 13.0, 27.0, 21.0),
+
+              centerSlice: Rect.fromLTWH(19, 13, 8, 8),
+              image: AssetImage(
+                'images/ic_share.png',
+              ),
+            ),
+          ),
+          constraints: BoxConstraints(
+            minWidth: 48,
+            maxWidth: 480,
+          ),
+          //调整文字的位置，要不然会跟image并排
+          padding: EdgeInsets.fromLTRB(18.5, 3.0, 14.5, 20.0),
+          child: Text(
+            '点XXXXXXXXXXXXXXXXXXXXXXXX\nXXXXXXXXX\nXXXXXXXXX\nXXXXXXXXX\nXXXXXXXXX',
+            style: TextStyle(color: Colors.red, fontSize: 15.0),
+          ),
+        ),
+        RichText(
+          maxLines: 3,
+          overflow: TextOverflow.ellipsis,
+          text: TextSpan(
+            text: '',
+            style: TextStyle(fontSize: 14, color: Colors.black),
+            children: [
+              TextSpan(
+                text: '#大学生找工作#',
+                style: TextStyle(fontSize: 15, color: Colors.blue),
+                recognizer: TapGestureRecognizer()
+                  ..onTap = () {
+                    print('点击了服务条款');
+                  },
+              ),
+              TextSpan(
+                text: ' 刚大学毕业改何去何从呢？',
+                style: TextStyle(fontSize: 15, color: Colors.black,fontWeight: FontWeight.bold,),
+                recognizer: TapGestureRecognizer()
+                  ..onTap = () {
+                    print('点击了隐私政策');
+                  },
+              ),
+              TextSpan(
+                text: '刚大学毕业改何去何从呢?大学毕业，想找工作，大学毕业，想找工作，大学毕业，想找工怎么就这么难呢？不知道是不是大学毕业，想找工作，大学毕业，想找工作，大学毕业，想找工怎么就这么难呢？不知道是不是',
+                style: TextStyle(fontSize: 15, color: Colors.black),
+              ),
+              WidgetSpan(
+                alignment: PlaceholderAlignment.middle,
+                child: Image.asset(
+                  'images/ic_share.png',
+                  width: 20,
+                  height: 20,
+                ),
+              ),
+            ],
+          ),
         ),
       ],
     );

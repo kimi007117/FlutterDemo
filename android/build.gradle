@@ -1,7 +1,9 @@
 buildscript {
     repositories {
-        google()
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
         jcenter()
+        google()
     }
 
     dependencies {
@@ -12,8 +14,10 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
         jcenter()
+        google()
     }
 }
 
